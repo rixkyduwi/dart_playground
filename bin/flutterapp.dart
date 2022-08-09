@@ -97,7 +97,32 @@ void main(List<String> arguments) {
   dicodingCat.eat();
   dicodingCat.poop();
   print(dicodingCat.weight);
+  print(Weather.rain.rainAmount);
+}
+enum Weather {
+  sunny(15),
+  cloudy(34),
+  rain(69),
+  storm(83);
+  final int rainAmount;
+  const Weather(this.rainAmount);
+}
+mixin Flyable {
+  void fly() {
+    print("I'm flying");
+  }
+}
 
+mixin Walkable {
+  void walk() {
+    print("I'm walking");
+  }
+}
+
+mixin Swimmable {
+  void swim() {
+    print("I'm swimming");
+  }
 }
 
 

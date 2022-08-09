@@ -24,5 +24,29 @@ class Animal {
   void poop() {
     print('$_name is pooping.');
     _weight = _weight - 0.1;
+
+  }
+
+}
+class Mammal {}
+class Bird {}
+mixin Flyable {
+  void fly() {
+    print("I'm flying");
   }
 }
+
+mixin Walkable {
+  void walk() {
+    print("I'm walking");
+  }
+}
+
+mixin Swimmable {
+  void swim() {
+    print("I'm swimming");
+  }
+}
+class Cat extends Mammal with Walkable { }
+
+class Duck extends Bird with Walkable, Flyable, Swimmable { }
